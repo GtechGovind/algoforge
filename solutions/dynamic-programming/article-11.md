@@ -3,7 +3,7 @@
 ## Core idea
 # One method to eliminate LeetCode’s robbery problem
 ![](https://labuladong.online/algo/images/souyisou1.png)
-**Notice: In order to meet the needs of readers, the website has put quick learning plan on the website. If necessary, you can take a look. Thank you for your support. In addition, I recommend that you study articles on my website for a better experience. **
+**Notice:** In order to support more readers, this article is also listed in the [Accelerated Catalog](https://labuladong.online/algo/intro/quick-learning-plan/). For a better reading experience, you can also read the same content on my [website](https://labuladong.online/algo/).
 
 ## Approach
 Implement the article strategy directly in your target language and keep state transitions explicit.

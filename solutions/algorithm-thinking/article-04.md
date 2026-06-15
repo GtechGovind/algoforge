@@ -2,7 +2,7 @@
 
 ## Core idea
 ![](https://labuladong.online/algo/images/souyisou1.png)
-**Notice:** In order to meet the needs of most readers, this article is also listed in the [Accelerated Catalog](https://labuladong.online/algo/intro/quick-learning-plan/). Thank you for your support. For a better reading experience, you can also follow the same article on my [website](https://labuladong.online/algo/).
+**Notice:** In order to support more readers, this article is also listed in the [Accelerated Catalog](https://labuladong.online/algo/intro/quick-learning-plan/). Thank you for your support. For a better reading experience, you can also read the same content on my [website](https://labuladong.online/algo/).
 After reading this article, you not only learned the algorithmic routine, but you can also solve the following problems in the meantime:
 
 ## Approach

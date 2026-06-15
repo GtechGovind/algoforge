@@ -3,7 +3,7 @@
 ## Core idea
 #Dynamic programming design: longest increasing subsequence
 ![](https://labuladong.online/algo/images/souyisou1.png)
-**Notice: In order to meet the needs of readers, the website has put quick learning plan on the website. If necessary, you can take a look. Thank you for your support. In addition, I recommend that you study articles on my website for a better experience. **
+**Notice:** In order to support more readers, this article is also listed in the [Accelerated Catalog](https://labuladong.online/algo/intro/quick-learning-plan/). For a better reading experience, you can also read the same content on my [website](https://labuladong.online/algo/).
 
 ## Approach
 Implement the article strategy directly in your target language and keep state transitions explicit.
@@ -14,7 +14,7 @@ The idea is valid when each step preserves the key invariant and advances toward
 ## Complexity
 - The Longest Increasing Subsequence (LIS) is a very classic algorithm problem. It is easier to think of the dynamic programming solution, with a time complexity of O(N^2). We use this problem to explain how to find the state transition equation and how to write the dynamic programming solution from the shallower to the deeper. What is more difficult to think of is the use of binary search, the time complexity is O(NlogN), we use a simple card game to help understand this ingenious solution.
 - At this point, this problem has been solved, with time complexity $O(N^2)$. To summarize how to find the state transition relationship of dynamic programming:
-- The time complexity of this solution is $O(NlogN)$, but to be honest, normal people can hardly think of this solution (maybe people who have played some card games can figure it out). So it’s good for everyone to understand it. Under normal circumstances, it’s pretty good to be able to give a dynamic programming solution.
+- The time complexity of this solution is $O(NlogN)$, which can be difficult to discover directly. If needed, review the DP transition idea first; once the intuition is clear, this binary-search version becomes much easier to remember.
 - Due to the addition of test cases, the binary search version of the `lengthOfLIS` function must be used here to pass all test cases. In this case, the time complexity of the algorithm is $O(NlogN)$, because sorting and calculating LIS each require $O(NlogN)$ time, and together they are still $O(NlogN)$; the space complexity is $O(N)$, because the function to calculate LIS requires a `top` array.
 
 ## Implementation

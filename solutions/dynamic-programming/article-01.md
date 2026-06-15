@@ -3,7 +3,7 @@
 ## Core idea
 # Classic dynamic programming: longest common subsequence
 ![](https://labuladong.online/algo/images/souyisou1.png)
-**Notice: In order to meet the needs of readers, the website has put quick learning plan on the website. If necessary, you can take a look. Thank you for your support. In addition, I recommend that you study articles on my website for a better experience. **
+**Notice:** In order to support more readers, this article is also listed in the [Accelerated Catalog](https://labuladong.online/algo/intro/quick-learning-plan/). For a better reading experience, you can also read the same content on my [website](https://labuladong.online/algo/).
 
 ## Approach
 Implement the article strategy directly in your target language and keep state transitions explicit.
@@ -13,7 +13,7 @@ The idea is valid when each step preserves the key invariant and advances toward
 
 ## Complexity
 - Obviously, the complexity of this idea is very high. If you want to enumerate all subsequences, the complexity is exponential, which is definitely not practical.
-- In addition, the bottom-up solution can be optimized through the [dynamic programming space compression technique] (https://labuladong.online/algo/dynamic-programming/space-optimization/) that we have talked about before, and the space complexity can be compressed to O(N). Due to space limitations, we will not expand it here.
+- In addition, the bottom-up solution can be optimized through the [dynamic programming space compression technique](https://labuladong.online/algo/dynamic-programming/space-optimization/), and the space complexity can be reduced to $O(N)$. Due to space limitations, we will not expand it here.
 
 ## Implementation
 
