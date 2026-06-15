@@ -1,0 +1,30 @@
+name: lint-docs
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  markdown:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate repository shape
+        run: |
+          test -f README.md || (echo "missing README.md" && exit 1)
+          test -f mkdocs.yml || (echo "missing mkdocs.yml" && exit 1)
+          test -f LICENSE || (echo "missing LICENSE" && exit 1)
+          test -d docs || (echo "missing docs" && exit 1)
+          test -d content/meta || (echo "missing content/meta" && exit 1)
+          test -d content/roadmaps || (echo "missing content/roadmaps" && exit 1)
+          test -d site || (echo "missing site" && exit 1)
+          test -d site/data || (echo "missing site/data" && exit 1)
+          test -f site/data/topics.json || (echo "missing topics json" && exit 1)
+      - name: Validate docs and scripts
+        run: |
+          find docs -name '*.md' -maxdepth 4 | wc -l
+      - name: Validate topics JSON
+        run: |
+          node -e "const fs = require('fs'); JSON.parse(fs.readFileSync('site/data/topics.json', 'utf8')); console.log('topics json ok');"

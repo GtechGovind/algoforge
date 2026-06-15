@@ -1,0 +1,23 @@
+name: docs-build
+
+on:
+  pull_request:
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate roadmap and meta files
+        run: |
+          test -f content/roadmaps/4-hour-reset-plan.md || (echo "missing 4-hour reset plan" && exit 1)
+          test -f content/roadmaps/90-day-interview-plan.md || (echo "missing 90-day plan" && exit 1)
+          test -f site/index.html || (echo "missing site index" && exit 1)
+          test -f site/topic.html || (echo "missing topic page" && exit 1)
+          test -f site/roadmaps.html || (echo "missing roadmaps page" && exit 1)
+      - name: Build docs
+        run: |
+          pip install mkdocs mkdocs-material >/tmp/pip.log || { cat /tmp/pip.log; exit 1; }
+          mkdocs build --strict

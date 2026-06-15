@@ -1,0 +1,36 @@
+site_name: AlgoForge Academy
+site_url: https://example.com/algoforge-academy
+site_description: A modern algorithm academy for coding interviews with problem-solving roadmaps, data structures, and LeetCode-focused patterns.
+site_author: AlgoForge Community
+
+docs_dir: .
+site_dir: site
+
+nav:
+  - Home: README.md
+  - Overview:
+      - Study Overview: docs/00-overview/README.md
+  - Foundations:
+      - Arrays and Linked Lists: docs/01-foundation/arrays.md
+      - Linked Lists: docs/01-foundation/linked-lists.md
+  - Patterns:
+      - Two Pointers: docs/02-patterns/two-pointers.md
+      - Sliding Window: docs/02-patterns/sliding-window.md
+      - Dynamic Programming: docs/02-patterns/dynamic-programming.md
+  - Interview Arena:
+      - 8 Week Roadmap: docs/03-interview-arena/roadmap.md
+      - 4 Hour Reset Plan: content/roadmaps/4-hour-reset-plan.md
+      - 90 Day Interview Plan: content/roadmaps/90-day-interview-plan.md
+  - Contribution:
+      - SEO Strategy: content/meta/seo-brief.md
+      - Contributing: CONTRIBUTING.md
+
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - search.highlight
+    - search.suggest
+
+plugins:
+  - search

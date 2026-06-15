@@ -1,0 +1,15 @@
+# Node artifacts
+node_modules/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.env
+
+# Build outputs
+.out/
+.DS_Store
+
+# Local build/output artifacts
+site/
+.tmp-upstream/
