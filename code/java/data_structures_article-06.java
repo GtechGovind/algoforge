@@ -1,5 +1,31 @@
 public class Data_structures_article_06 {
+    /**
+     * Binary tree mental method (ideas)
+     */
     public Object solve(Object... args) {
-        return null; // Starter implementation
+        if (args == null || args.length != 1) {
+            throw new IllegalArgumentException("Expected: (TreeNode root)");
+        }
+
+        Solution solution = new Solution();
+        return solution.flatten((TreeNode) args[0]);
+    }
+
+    private static class Solution {
+
+        public void flatten(TreeNode root) {
+            if (root == null) return;
+            flatten(root.left);
+            flatten(root.right);
+            TreeNode left = root.left;
+            TreeNode right = root.right;
+            root.left = null;
+            root.right = left;
+            TreeNode p = root;
+            while (p.right != null) {
+                p = p.right;
+            }
+            p.right = right;
+        }
     }
 }

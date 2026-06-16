@@ -1,5 +1,5 @@
 site_name: AlgoForge Academy
-site_url: https://example.com/algoforge-academy
+site_url: https://github.com/GtechGovind/algoforge.git
 site_description: A modern algorithm academy for coding interviews with problem-solving roadmaps, data structures, and LeetCode-focused patterns.
 site_author: AlgoForge Community
 
@@ -10,6 +10,7 @@ nav:
   - Home: README.md
   - Overview:
       - Study Overview: docs/00-overview/README.md
+      - Visual Learning Guide: docs/00-overview/visual-learning-guide.md
   - Foundations:
       - Arrays and Linked Lists: docs/01-foundation/arrays.md
       - Linked Lists: docs/01-foundation/linked-lists.md

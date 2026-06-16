@@ -1,5 +1,14 @@
 # Pattern: Dynamic Programming
 
+## Kid-friendly idea
+
+Stairs are a classic DP image.
+To reach stair `i`, you only need the result from smaller stair positions.
+
+```text
+state(0) -> state(1) -> state(2) -> state(3) ...
+```
+
 ## Three checkpoints before coding
 
 1. Identify state variables

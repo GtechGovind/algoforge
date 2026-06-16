@@ -1,26 +1,36 @@
 # Pattern: Two Pointers
 
+## Kid-friendly idea
+
+Use two helpers at the ends of a line.
+Move them closer one step at a time.
+
+```
+L....................................R
+```
+
 ## Use cases
 
-- sorted array pair search
-- removing duplicates / stable partition
-- reversing in-place structures
+- sorted pair search
+- remove duplicates
+- in-place reverse or partition
 
 ## Template
 
 ```text
-sort or define monotonic relation
-left = 0
-right = n - 1
-while left < right:
-  if condition(left, right):
-    left++, right--
-  elif condition_to_shrink_left:
-    left++
+sort or define order rule
+L = 0
+R = n - 1
+while L < R:
+  if good(L, R):
+    move both inward
+  elif need_more_from_left:
+    L += 1
   else:
-    right--
+    R -= 1
 ```
 
 ## Why it works
 
-Each step shrinks the search space by one due to monotonic relationship between indices and target property.
+At every step, you throw away one impossible area.
+That means less work and clearer progress.

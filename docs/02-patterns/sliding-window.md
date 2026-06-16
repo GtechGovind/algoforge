@@ -1,8 +1,20 @@
 # Pattern: Sliding Window
 
+## Kid-friendly idea
+
+Think of a magnifying glass over a row.
+The glass moves right one block at a time.
+If the window is too full or invalid, shrink from the left.
+
+```text
+L
+[a b c d e f g]
+      R
+```
+
 ## Ideal for
 
-- longest/shortest substring and subarray
+- longest/shortest substring or subarray
 - counting windows with constraints
 - frequency-based optimization
 

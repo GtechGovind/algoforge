@@ -1,18 +1,46 @@
 # Arrays and Prefix Thinking
 
-## Why arrays are the starting point
+## Why arrays are first
 
-Every large interview problem uses arrays implicitly. Mastering index invariants, memory behavior, and traversal order reduces complexity in later topics.
+Imagine a row of toy boxes.
+Each box has a number label and you can open only by position.
+Arrays are exactly this row.
 
-## Essential templates
+## The beginner mental model
 
-- in-place mutation
-- two-pointer scan
-- sliding window
-- prefix and difference arrays
+1. Every item has an `index`.
+2. Indexes start at `0`.
+3. `index + 1` is the next box.
 
-## Common pitfalls
+## Visual template
 
-- not guarding index boundaries
-- overusing nested loops without deriving constraints
-- incorrect middle index in binary-like operations
+```
+index: 0   1   2   3
+value: 4   1   9   3
+```
+
+## Core ideas for this section
+
+- read by index pattern (scan left to right)
+- in-place mutation (change value inside the same box)
+- simple prefix and difference ideas
+- quick checks before using nested loops
+
+## Common mistakes (and visual fix)
+
+- index out of bounds: draw the last index number and never cross it.
+- forgotten middle: for split logic, mark left and right zones clearly.
+- too many nested loops: stop when your drawn index map stops giving new information.
+
+## 5-minute practice
+
+Input: `[2, 1, 4, 3]`  
+Task: find sum of every pair of neighbors.
+
+Draw:
+
+```
+2+1, 1+4, 4+3
+```
+
+Then write one short function.

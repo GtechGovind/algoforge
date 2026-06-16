@@ -1,7 +1,24 @@
-"""Starter Python scaffold for Dynamic programming subsequence problem solving template."""
+"""Dynamic programming subsequence problem solving template"""
 
+from __future__ import annotations
 from typing import Any
 
+
 def solve(*args: Any, **kwargs: Any) -> Any:
-    """Starter implementation for this topic."""
-    return None
+    """Run this lesson exercise with positional inputs."""
+    return _Solution().longestPalindromeSubseq(*args, **kwargs)
+
+
+class _Solution:
+    def longestPalindromeSubseq(self, s: str) -> int:
+        n = len(s)
+        dp = [[0 for _ in range(n)] for _ in range(n)]
+        for i in range(n):
+            dp[i][i] = 1
+        for i in range(n - 1, -1, -1):
+            for j in range(i + 1, n):
+                if s[i] == s[j]:
+                    dp[i][j] = dp[i + 1][j - 1] + 2
+                else:
+                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
+        return dp[0][n - 1]

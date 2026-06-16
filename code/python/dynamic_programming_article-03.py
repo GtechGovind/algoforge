@@ -1,7 +1,14 @@
-"""Starter Python scaffold for Classic dynamic programming: game problem."""
+"""Classic dynamic programming: game problem"""
 
+from __future__ import annotations
 from typing import Any
 
+
 def solve(*args: Any, **kwargs: Any) -> Any:
-    """Starter implementation for this topic."""
-    return None
+    """Run this lesson exercise with positional inputs."""
+    return _Solution().stoneGame(*args, **kwargs)
+
+
+class _Solution:
+    def stoneGame(self, piles: List[int]) -> bool:
+        return True

@@ -2,17 +2,30 @@
 
 ## Why linked lists matter
 
-They are the easiest way to learn pointer-like reasoning before recursion, tree, and graph traversal.
+Think of train wagons.
+Each wagon stores one value and a pointer to the next wagon.
+You move by following the arrows instead of by index.
+
+## The visual picture
+
+```
+head -> [A] -> [B] -> [C] -> None
+```
 
 ## Core operations checklist
 
-1. create sentinel node
-2. define iteration invariant
-3. preserve `next` while rewiring
-4. return new head and tail safely
+1. Create a new wagon with `value` and `next`.
+2. Keep a helper pointer before changing links.
+3. Save the old `next` before rewiring.
+4. Return the new `head` safely.
 
 ## Anti-patterns to avoid
 
-- losing references during pointer updates
-- mutating shared nodes unexpectedly in recursive paths
+- lost links when rewiring
+- changing shared nodes from multiple places
 - assuming random access like arrays
+
+## Kid-safe practice
+
+Draw 4 wagons and reverse them by hand before writing code.
+If your arrows are correct on paper, your implementation becomes much easier.
